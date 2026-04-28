@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NemoApp 상권 분석 대시보드</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(23, 28, 41, 0.8);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+            --accent-glow: rgba(16, 185, 129, 0.3);
+            --border: rgba(255, 255, 255, 0.08);
+            --gradient: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2.5rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border) 0%, rgba(255,255,255,0.02) 100%);
+        }
+
+        .logo h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(16, 185, 129, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            font-size: 0.8125rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        /* KPI Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .kpi-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(16, 185, 129, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .kpi-card:hover::before { opacity: 1; }
+
+        .kpi-label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .kpi-value {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+        }
+
+        .kpi-unit {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Charts Section */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 1024px) {
+            .chart-grid { grid-template-columns: 1fr; }
+        }
+
+        .chart-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2.25rem;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-header {
+            margin-bottom: 2rem;
+        }
+
+        .chart-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.25rem;
+        }
+
+        .chart-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .chart-container {
+            flex-grow: 1;
+            position: relative;
+        }
+
+        /* Insights Section */
+        .insights-card {
+            background: linear-gradient(180deg, var(--card-bg) 0%, rgba(15, 23, 42, 0.9) 100%);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            padding: 4rem;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .insights-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .insights-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .insights-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .insights-header p {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .insight-item {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        @media (max-width: 900px) {
+            .insight-item { grid-template-columns: 1fr; gap: 1rem; }
+        }
+
+        .insight-tag {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .insight-tag::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--gradient);
+        }
+
+        .insight-text {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        footer {
+            margin-top: 5rem;
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-color); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: slideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>Nemo Insight <span style="font-weight: 300; opacity: 0.6;">v1.0</span></h1>
+            </div>
+            <div class="status-badge">
+                <div class="status-dot"></div>
+                LIVE ANALYSIS: 2026.04.28
+            </div>
+        </header>
+
+        <!-- KPI Summary -->
+        <div class="kpi-grid">
+            <div class="kpi-card animate" style="animation-delay: 0.1s;">
+                <span class="kpi-label">분석 데이터 총계</span>
+                <div class="kpi-value">698<span class="kpi-unit">개 매물</span></div>
+            </div>
+            <div class="kpi-card animate" style="animation-delay: 0.2s;">
+                <span class="kpi-label">평균 월 임대료</span>
+                <div class="kpi-value">5,250<span class="kpi-unit">만원</span></div>
+            </div>
+            <div class="kpi-card animate" style="animation-delay: 0.3s;">
+                <span class="kpi-label">평균 보증금 규모</span>
+                <div class="kpi-value">6,764<span class="kpi-unit">만원</span></div>
+            </div>
+            <div class="kpi-card animate" style="animation-delay: 0.4s;">
+                <span class="kpi-label">무권리 매물 비중</span>
+                <div class="kpi-value">54.2<span class="kpi-unit">%</span></div>
+            </div>
+        </div>
+
+        <!-- Visualization Hub -->
+        <div class="chart-grid">
+            <div class="chart-card animate" style="animation-delay: 0.5s;">
+                <div class="chart-header">
+                    <h3 class="chart-title">월세 구간별 분포</h3>
+                    <p class="chart-subtitle">Monthly Rent Distribution Profile</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="rentChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card animate" style="animation-delay: 0.6s;">
+                <div class="chart-header">
+                    <h3 class="chart-title">자본 투입 규모 분석</h3>
+                    <p class="chart-subtitle">Deposit Capital Requirement Trends</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="depChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card animate" style="animation-delay: 0.7s;">
+                <div class="chart-header">
+                    <h3 class="chart-title">업종별 상권 구성</h3>
+                    <p class="chart-subtitle">Business Category Breakdown</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="catChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card animate" style="animation-delay: 0.8s;">
+                <div class="chart-header">
+                    <h3 class="chart-title">층수별 임대 가치 비교</h3>
+                    <p class="chart-subtitle">Floor-wise Rent Efficiency Index</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="floorChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intelligence Report -->
+        <div class="insights-card animate" style="animation-delay: 0.9s;">
+            <div class="insights-header">
+                <h2>Strategic Intelligence Report</h2>
+                <p>20년차 데이터 분석가가 제언하는 역삼역 상권 생존 및 성장 전략</p>
+            </div>
+
+            <div class="insight-item">
+                <div class="insight-tag">Risk Analysis</div>
+                <div class="insight-text">
+                    대한민국 최고 수준의 핵심 오피스 상권이 지닌 역동성과 그 화려한 이면에 숨겨진 치명적인 리스크를 확인했습니다. 전체 매물 중 절반 이상인 54.2%가 '무권리' 상태라는 점은 기존 임차인들이 권리금을 회수하지 못할 만큼 영업 환경이 악화되었거나, 오프라인 매장의 가치가 이전보다 하락했음을 시사하는 위기 신호입니다.
+                </div>
+            </div>
+
+            <div class="insight-item">
+                <div class="insight-tag">Space Strategy</div>
+                <div class="insight-text">
+                    현재 소비자들은 SNS 등을 활용한 확고한 '목적형 소비' 패턴을 보입니다. 1층의 살인적인 임대료를 감당하기보다, 과감하게 2층 이상의 매물을 선택하여 고정비를 절감하고, 이를 퍼포먼스 마케팅과 서비스 품질 향상에 재투자하는 전략이 생존 확률을 비약적으로 높이는 핵심입니다.
+                </div>
+            </div>
+
+            <div class="insight-item">
+                <div class="insight-tag">Business Model</div>
+                <div class="insight-text">
+                    F&B 업종의 쏠림 현상이 심각합니다. 낮에는 브런치, 밤에는 다이닝 펍으로 변신하는 샵인샵 모델이나 타임 쉐어링 전략을 통해 매장의 가동률을 극한으로 끌어올려야 합니다. 단위 면적당 매출 효율성을 극대화하는 혁신적인 비즈니스 모델만이 이 레드오션에서 살아남을 수 있는 해법입니다.
+                </div>
+            </div>
+
+            <div class="insight-item" style="margin-bottom: 0;">
+                <div class="insight-tag">Data-Driven</div>
+                <div class="insight-text">
+                    '가성비'와 '무권리' 키워드에 대한 시장의 높은 민감도는 거시적 불확실성에 대한 방어 심리를 보여줍니다. 지인의 추천이나 감이 아닌, 객관적인 정량 지표를 바탕으로 상가의 가치와 리스크를 평가하는 '데이터 기반 의사결정' 마인드셋이 그 어느 때보다 중요합니다.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 NEMO APP ANALYTICS | Powered by DeepMind Antigravity</p>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.5;">Confidential & Proprietary Research Document</p>
+        </footer>
+    </div>
+
+    <script>
+        // Embedded Dashboard Data
+        const dashboardData = {
+            "rent_dist": {
+                "labels": ["0-900만", "900-1800만", "1800-2700만", "2700-3600만", "3600-4500만", "4500-5400만", "5400-6300만", "6300-7200만", "7200-8100만", "8100-9000만"],
+                "values": [616, 60, 13, 4, 2, 0, 0, 0, 0, 3]
+            },
+            "dep_dist": {
+                "labels": ["0-1억", "1-2억", "2-3억", "3-4억", "4-5억", "5-6억", "6-7억", "7-8억", "8-9억", "9-10억"],
+                "values": [605, 66, 14, 4, 6, 0, 0, 0, 0, 3]
+            },
+            "categories": {
+                "labels": ["기타업종", "서비스업", "일반음식점", "휴게음식점", "오락스포츠", "주류점", "판매업"],
+                "values": [338, 96, 96, 85, 36, 31, 16]
+            },
+            "floor_rent": {
+                "labels": ["12층", "1층", "지하2층", "11층", "지하4층", "3층", "2층", "10층", "4층", "6층"],
+                "values": [7933, 7198, 6205, 5900, 5000, 4908, 4617, 4366, 4307, 4178]
+            }
+        };
+
+        const chartConfig = {
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    titleColor: '#fff',
+                    bodyColor: '#cbd5e1',
+                    padding: 12,
+                    borderColor: 'rgba(255,255,255,0.1)',
+                    borderWidth: 1,
+                    displayColors: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
+                    ticks: { color: '#64748b', font: { size: 11 } }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: { 
+                        color: '#64748b', 
+                        font: { size: 10 },
+                        maxRotation: 45,
+                        minRotation: 0
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        };
+
+        // Render Charts
+        window.onload = () => {
+            // Rent Chart
+            new Chart(document.getElementById('rentChart'), {
+                type: 'bar',
+                data: {
+                    labels: dashboardData.rent_dist.labels,
+                    datasets: [{
+                        data: dashboardData.rent_dist.values,
+                        backgroundColor: 'rgba(16, 185, 129, 0.7)',
+                        hoverBackgroundColor: '#10b981',
+                        borderRadius: 8
+                    }]
+                },
+                options: chartConfig
+            });
+
+            // Deposit Chart
+            new Chart(document.getElementById('depChart'), {
+                type: 'line',
+                data: {
+                    labels: dashboardData.dep_dist.labels,
+                    datasets: [{
+                        data: dashboardData.dep_dist.values,
+                        borderColor: '#3b82f6',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: chartConfig
+            });
+
+            // Category Chart
+            new Chart(document.getElementById('catChart'), {
+                type: 'bar',
+                data: {
+                    labels: dashboardData.categories.labels,
+                    datasets: [{
+                        data: dashboardData.categories.values,
+                        backgroundColor: 'rgba(139, 92, 246, 0.7)',
+                        hoverBackgroundColor: '#8b5cf6',
+                        borderRadius: 8
+                    }]
+                },
+                options: chartConfig
+            });
+
+            // Floor Chart
+            new Chart(document.getElementById('floorChart'), {
+                type: 'bar',
+                data: {
+                    labels: dashboardData.floor_rent.labels,
+                    datasets: [{
+                        data: dashboardData.floor_rent.values,
+                        backgroundColor: 'rgba(245, 158, 11, 0.7)',
+                        hoverBackgroundColor: '#f59e0b',
+                        borderRadius: 8
+                    }]
+                },
+                options: chartConfig
+            });
+        };
+    </script>
+</body>
+</html>
