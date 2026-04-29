@@ -14,153 +14,153 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+17: lib/
+18: lib64/
+19: parts/
+20: sdist/
+21: var/
+22: wheels/
+23: share/python-wheels/
+24: *.egg-info/
+25: .installed.cfg
+26: *.egg
+27: MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script, and may contain methods for
-#  unpackaging packages, so Python programs should be ignored
-*.manifest
-*.spec
+31: #  unpackaging packages, so Python programs should be ignored
+32: *.manifest
+33: *.spec
 
 # Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+36: pip-log.txt
+37: pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-cover/
+40: htmlcov/
+41: .tox/
+42: .nox/
+43: .coverage
+44: .coverage.*
+45: .cache
+46: nosetests.xml
+47: coverage.xml
+48: *.cover
+49: *.py,cover
+50: .hypothesis/
+51: .pytest_cache/
+52: cover/
 
 # Translations
-*.mo
-*.pot
+55: *.mo
+56: *.pot
 
 # Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
+59: *.log
+60: local_settings.py
+61: db.sqlite3
+62: db.sqlite3-journal
 
 # Flask stuff:
-instance/
-.webassets-cache
+65: instance/
+66: .webassets-cache
 
 # Scrapy stuff:
-.scrapy
+69: .scrapy
 
 # Sphinx documentation
-docs/_build/
+72: docs/_build/
 
 # PyBuilder
-.pybuilder/
-target/
+75: .pybuilder/
+76: target/
 
 # Jupyter Notebook
-.ipynb_checkpoints
+79: .ipynb_checkpoints
 
 # IPython
-profile_default/
-ipython_config.py
+82: profile_default/
+83: ipython_config.py
 
 # pyenv
 #   For a library or package, you might want to ignore these files since the Python version
-#   is managed by the consumable. For a GUI or desktop app, you might want to keep them.
-# .python-version
+87: #  is managed by the consumable. For a GUI or desktop app, you might want to keep them.
+88: # .python-version
 
 # pipenv
 #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or even
-#   fail to install them.
-#Pipfile.lock
+92: #   However, in case of collaboration, if having platform-specific dependencies or dependencies
+93: #   having no cross-platform support, pipenv may install dependencies that don't work, or even
+94: #   fail to install them.
+95: #Pipfile.lock
 
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+99: #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+100: #poetry.lock
 
 # pdm
 #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
+104: #pdm.lock
 #   pdm build plugins may create files in .pdm-build/
-.pdm-build/
+106: .pdm-build/
 
 # PEP 582; used by e.g. github.com/fkrull/venvs & pdm
-__pypackages__/
+109: __pypackages__/
 
 # Celery stuff
-celerybeat-schedule
-celerybeat.pid
+112: celerybeat-schedule
+113: celerybeat.pid
 
 # SageMath parsed files
-*.sage.py
+116: *.sage.py
 
 # Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
+119: .env
+120: .venv
+121: env/
+122: venv/
+123: ENV/
+124: env.bak/
+125: venv.bak/
 
 # Spyder project settings
-.spyderproject
-.spyproject
+128: .spyderproject
+129: .spyproject
 
 # Rope project settings
-.ropeproject
+132: .ropeproject
 
 # mkdocs documentation
-/site
+135: /site
 
 # mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+138: .mypy_cache/
+139: .dmypy.json
+140: dmypy.json
 
 # Pyre type checker
-.pyre/
+143: .pyre/
 
 # pytype static type analyzer
-.pytype/
+146: .pytype/
 
 # Cython debug symbols
-cython_debug/
+149: cython_debug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate repo from Github
-#  .idea/ai_generated_configs.xml
-.idea/
+153: #  .idea/ai_generated_configs.xml
+154: .idea/
 
 # VS Code
-.vscode/
+157: .vscode/
 
 # macOS
-.DS_Store
+160: .DS_Store
 
 # Project specific
-data/*.db
-data/*.csv
-images/
-.agents/
+163: data/*.db
+164: data/*.csv
+# images/
+166: .agents/
