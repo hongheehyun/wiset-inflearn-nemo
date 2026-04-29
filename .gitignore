@@ -62,105 +62,105 @@ db.sqlite3
 db.sqlite3-journal
 
 # Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-#   For a library or package, you might want to ignore these files since the Python version
-#   is managed by the consumable. For a GUI or desktop app, you might want to keep them.
-# .python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or even
-#   fail to install them.
-#Pipfile.lock
-
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#pdm.lock
-#   pdm build plugins may create files in .pdm-build/
-.pdm-build/
-
-# PEP 582; used by e.g. github.com/fkrull/venvs & pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate repo from Github
-#  .idea/ai_generated_configs.xml
-.idea/
-
-# VS Code
-.vscode/
-
-# macOS
-.DS_Store
-
-# Project specific
-data/*.db
-data/*.csv
-# images/
-.agents/
+65: instance/
+66: .webassets-cache
+67: 
+68: # Scrapy stuff:
+69: .scrapy
+70: 
+71: # Sphinx documentation
+72: docs/_build/
+73: 
+74: # PyBuilder
+75: .pybuilder/
+76: target/
+77: 
+78: # Jupyter Notebook
+79: .ipynb_checkpoints
+80: 
+81: # IPython
+82: profile_default/
+83: ipython_config.py
+84: 
+85: # pyenv
+86: #   For a library or package, you might want to ignore these files since the Python version
+87: #   is managed by the consumable. For a GUI or desktop app, you might want to keep them.
+88: # .python-version
+89: 
+90: # pipenv
+91: #   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+92: #   However, in case of collaboration, if having platform-specific dependencies or dependencies
+93: #   having no cross-platform support, pipenv may install dependencies that don't work, or even
+94: #   fail to install them.
+95: #Pipfile.lock
+96: 
+97: # poetry
+98: #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+99: #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+100: #poetry.lock
+101: 
+102: # pdm
+103: #   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+104: #pdm.lock
+105: #   pdm build plugins may create files in .pdm-build/
+106: .pdm-build/
+107: 
+108: # PEP 582; used by e.g. github.com/fkrull/venvs & pdm
+109: __pypackages__/
+110: 
+111: # Celery stuff
+112: celerybeat-schedule
+113: celerybeat.pid
+114: 
+115: # SageMath parsed files
+116: *.sage.py
+117: 
+118: # Environments
+119: .env
+120: .venv
+121: env/
+122: venv/
+123: ENV/
+124: env.bak/
+125: venv.bak/
+126: 
+127: # Spyder project settings
+128: .spyderproject
+129: .spyproject
+130: 
+131: # Rope project settings
+132: .ropeproject
+133: 
+134: # mkdocs documentation
+135: /site
+136: 
+137: # mypy
+138: .mypy_cache/
+139: .dmypy.json
+140: dmypy.json
+141: 
+142: # Pyre type checker
+143: .pyre/
+144: 
+145: # pytype static type analyzer
+146: .pytype/
+147: 
+148: # Cython debug symbols
+149: cython_debug/
+150: 
+151: # PyCharm
+152: #  JetBrains specific template is maintained in a separate repo from Github
+153: #  .idea/ai_generated_configs.xml
+154: .idea/
+155: 
+156: # VS Code
+157: .vscode/
+158: 
+159: # macOS
+160: .DS_Store
+161: 
+162: # Project specific
+163: data/*.db
+164: data/*.csv
+165: # images/
+166: .agents/
