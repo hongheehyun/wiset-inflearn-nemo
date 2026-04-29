@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: true 
 theme: default
 paginate: true
 header: "NemoApp 상가 데이터 분석 보고서 (Risograph Style)"
