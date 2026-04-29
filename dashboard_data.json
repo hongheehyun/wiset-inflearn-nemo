@@ -102,5 +102,807 @@
             4307.8,
             4178.8
         ]
-    }
+    },
+    "scatter_data": [
+        {
+            "size": 98.442,
+            "monthlyRent": 3700
+        },
+        {
+            "size": 19.83,
+            "monthlyRent": 1000
+        },
+        {
+            "size": 85.95,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 165.29,
+            "monthlyRent": 2530
+        },
+        {
+            "size": 199.54,
+            "monthlyRent": 6500
+        },
+        {
+            "size": 228.0992,
+            "monthlyRent": 4300
+        },
+        {
+            "size": 344.19,
+            "monthlyRent": 7000
+        },
+        {
+            "size": 102.48,
+            "monthlyRent": 8500
+        },
+        {
+            "size": 105.11,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 297.5,
+            "monthlyRent": 5400
+        },
+        {
+            "size": 46.28,
+            "monthlyRent": 3700
+        },
+        {
+            "size": 28.79,
+            "monthlyRent": 700
+        },
+        {
+            "size": 26.48,
+            "monthlyRent": 1100
+        },
+        {
+            "size": 170.93,
+            "monthlyRent": 4300
+        },
+        {
+            "size": 76.0,
+            "monthlyRent": 1400
+        },
+        {
+            "size": 165.0,
+            "monthlyRent": 3700
+        },
+        {
+            "size": 135.52,
+            "monthlyRent": 5000
+        },
+        {
+            "size": 165.29,
+            "monthlyRent": 6500
+        },
+        {
+            "size": 94.743,
+            "monthlyRent": 3700
+        },
+        {
+            "size": 25.34,
+            "monthlyRent": 450
+        },
+        {
+            "size": 193.0,
+            "monthlyRent": 10000
+        },
+        {
+            "size": 148.8,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 158.0,
+            "monthlyRent": 6700
+        },
+        {
+            "size": 212.88,
+            "monthlyRent": 8500
+        },
+        {
+            "size": 23.14,
+            "monthlyRent": 1580
+        },
+        {
+            "size": 72.7,
+            "monthlyRent": 1670
+        },
+        {
+            "size": 122.31,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 170.93,
+            "monthlyRent": 4300
+        },
+        {
+            "size": 38.0,
+            "monthlyRent": 1100
+        },
+        {
+            "size": 46.0,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 46.28,
+            "monthlyRent": 1700
+        },
+        {
+            "size": 182.0,
+            "monthlyRent": 4060
+        },
+        {
+            "size": 135.41,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 81.06,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 323.97,
+            "monthlyRent": 19050
+        },
+        {
+            "size": 115.9,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 36.36,
+            "monthlyRent": 1950
+        },
+        {
+            "size": 76.03,
+            "monthlyRent": 2300
+        },
+        {
+            "size": 296.2,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 85.95,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 116.76,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 181.82,
+            "monthlyRent": 15000
+        },
+        {
+            "size": 105.79,
+            "monthlyRent": 1500
+        },
+        {
+            "size": 132.2,
+            "monthlyRent": 6000
+        },
+        {
+            "size": 114.51,
+            "monthlyRent": 2700
+        },
+        {
+            "size": 49.3,
+            "monthlyRent": 1880
+        },
+        {
+            "size": 85.3,
+            "monthlyRent": 3500
+        },
+        {
+            "size": 89.26,
+            "monthlyRent": 1700
+        },
+        {
+            "size": 16.53,
+            "monthlyRent": 1650
+        },
+        {
+            "size": 69.4,
+            "monthlyRent": 1700
+        },
+        {
+            "size": 19.83,
+            "monthlyRent": 1250
+        },
+        {
+            "size": 89.26,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 23.14,
+            "monthlyRent": 700
+        },
+        {
+            "size": 36.36,
+            "monthlyRent": 1600
+        },
+        {
+            "size": 640.23,
+            "monthlyRent": 36000
+        },
+        {
+            "size": 50.0,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 54.48,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 49.36,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 29.42,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 143.33,
+            "monthlyRent": 3400
+        },
+        {
+            "size": 105.8,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 125.6,
+            "monthlyRent": 2900
+        },
+        {
+            "size": 67.11,
+            "monthlyRent": 2400
+        },
+        {
+            "size": 86.0,
+            "monthlyRent": 1380
+        },
+        {
+            "size": 13.22,
+            "monthlyRent": 2900
+        },
+        {
+            "size": 231.4,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 243.14,
+            "monthlyRent": 10000
+        },
+        {
+            "size": 628.39,
+            "monthlyRent": 22000
+        },
+        {
+            "size": 149.42,
+            "monthlyRent": 16000
+        },
+        {
+            "size": 36.3,
+            "monthlyRent": 1380
+        },
+        {
+            "size": 213.58,
+            "monthlyRent": 14000
+        },
+        {
+            "size": 223.48,
+            "monthlyRent": 6800
+        },
+        {
+            "size": 24.79,
+            "monthlyRent": 420
+        },
+        {
+            "size": 576.15,
+            "monthlyRent": 25000
+        },
+        {
+            "size": 179.34,
+            "monthlyRent": 0
+        },
+        {
+            "size": 42.98,
+            "monthlyRent": 2200
+        },
+        {
+            "size": 148.76,
+            "monthlyRent": 3600
+        },
+        {
+            "size": 163.24,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 122.27,
+            "monthlyRent": 5000
+        },
+        {
+            "size": 76.0,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 36.36,
+            "monthlyRent": 2100
+        },
+        {
+            "size": 132.2,
+            "monthlyRent": 3900
+        },
+        {
+            "size": 482.64,
+            "monthlyRent": 25000
+        },
+        {
+            "size": 71.65,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 37.0175,
+            "monthlyRent": 2420
+        },
+        {
+            "size": 40.0,
+            "monthlyRent": 3600
+        },
+        {
+            "size": 222.0,
+            "monthlyRent": 18150
+        },
+        {
+            "size": 351.48,
+            "monthlyRent": 12400
+        },
+        {
+            "size": 132.2,
+            "monthlyRent": 5000
+        },
+        {
+            "size": 67.25,
+            "monthlyRent": 2400
+        },
+        {
+            "size": 116.91,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 129.8,
+            "monthlyRent": 2300
+        },
+        {
+            "size": 37.01,
+            "monthlyRent": 2200
+        },
+        {
+            "size": 198.3,
+            "monthlyRent": 3500
+        },
+        {
+            "size": 183.32,
+            "monthlyRent": 5700
+        },
+        {
+            "size": 106.14,
+            "monthlyRent": 5300
+        },
+        {
+            "size": 39.67,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 66.1,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 148.8,
+            "monthlyRent": 3100
+        },
+        {
+            "size": 181.82,
+            "monthlyRent": 7810
+        },
+        {
+            "size": 138.84,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 243.04,
+            "monthlyRent": 12600
+        },
+        {
+            "size": 59.5,
+            "monthlyRent": 1600
+        },
+        {
+            "size": 138.84,
+            "monthlyRent": 7000
+        },
+        {
+            "size": 165.29,
+            "monthlyRent": 5000
+        },
+        {
+            "size": 152.1,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 61.72,
+            "monthlyRent": 4070
+        },
+        {
+            "size": 158.68,
+            "monthlyRent": 3500
+        },
+        {
+            "size": 120.92,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 115.7,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 246.81,
+            "monthlyRent": 6200
+        },
+        {
+            "size": 198.35,
+            "monthlyRent": 3500
+        },
+        {
+            "size": 56.3,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 169.09,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 79.6,
+            "monthlyRent": 5800
+        },
+        {
+            "size": 60.525,
+            "monthlyRent": 2400
+        },
+        {
+            "size": 26.63,
+            "monthlyRent": 3300
+        },
+        {
+            "size": 32.64,
+            "monthlyRent": 700
+        },
+        {
+            "size": 82.64,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 112.4,
+            "monthlyRent": 4800
+        },
+        {
+            "size": 70.64,
+            "monthlyRent": 3900
+        },
+        {
+            "size": 132.23,
+            "monthlyRent": 3300
+        },
+        {
+            "size": 26.78,
+            "monthlyRent": 1800
+        },
+        {
+            "size": 105.8,
+            "monthlyRent": 2430
+        },
+        {
+            "size": 62.81,
+            "monthlyRent": 1600
+        },
+        {
+            "size": 165.29,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 319.68,
+            "monthlyRent": 8000
+        },
+        {
+            "size": 38.96,
+            "monthlyRent": 900
+        },
+        {
+            "size": 14.532,
+            "monthlyRent": 1400
+        },
+        {
+            "size": 16.53,
+            "monthlyRent": 1100
+        },
+        {
+            "size": 86.87,
+            "monthlyRent": 3100
+        },
+        {
+            "size": 108.75,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 66.1,
+            "monthlyRent": 1500
+        },
+        {
+            "size": 42.95,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 132.23,
+            "monthlyRent": 6000
+        },
+        {
+            "size": 628.39,
+            "monthlyRent": 27000
+        },
+        {
+            "size": 100.83,
+            "monthlyRent": 5620
+        },
+        {
+            "size": 151.69,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 85.95,
+            "monthlyRent": 7400
+        },
+        {
+            "size": 36.36,
+            "monthlyRent": 2200
+        },
+        {
+            "size": 85.9504,
+            "monthlyRent": 3300
+        },
+        {
+            "size": 82.7,
+            "monthlyRent": 3300
+        },
+        {
+            "size": 26.45,
+            "monthlyRent": 1300
+        },
+        {
+            "size": 370.25,
+            "monthlyRent": 90000
+        },
+        {
+            "size": 42.63,
+            "monthlyRent": 1150
+        },
+        {
+            "size": 115.17,
+            "monthlyRent": 3800
+        },
+        {
+            "size": 109.09,
+            "monthlyRent": 5000
+        },
+        {
+            "size": 49.55,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 120.636,
+            "monthlyRent": 6500
+        },
+        {
+            "size": 33.06,
+            "monthlyRent": 2200
+        },
+        {
+            "size": 79.34,
+            "monthlyRent": 2400
+        },
+        {
+            "size": 39.6694,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 150.02,
+            "monthlyRent": 3600
+        },
+        {
+            "size": 36.0,
+            "monthlyRent": 2740
+        },
+        {
+            "size": 70.0655,
+            "monthlyRent": 4100
+        },
+        {
+            "size": 145.45,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 148.76,
+            "monthlyRent": 8000
+        },
+        {
+            "size": 132.885,
+            "monthlyRent": 3900
+        },
+        {
+            "size": 163.54,
+            "monthlyRent": 6000
+        },
+        {
+            "size": 661.55,
+            "monthlyRent": 42000
+        },
+        {
+            "size": 159.31,
+            "monthlyRent": 4400
+        },
+        {
+            "size": 103.5,
+            "monthlyRent": 3200
+        },
+        {
+            "size": 99.17,
+            "monthlyRent": 3000
+        },
+        {
+            "size": 49.59,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 38.0,
+            "monthlyRent": 1150
+        },
+        {
+            "size": 49.59,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 108.976,
+            "monthlyRent": 4350
+        },
+        {
+            "size": 112.617,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 229.0,
+            "monthlyRent": 4200
+        },
+        {
+            "size": 76.0,
+            "monthlyRent": 1100
+        },
+        {
+            "size": 142.2,
+            "monthlyRent": 2300
+        },
+        {
+            "size": 33.06,
+            "monthlyRent": 2200
+        },
+        {
+            "size": 140.19,
+            "monthlyRent": 3100
+        },
+        {
+            "size": 27.77,
+            "monthlyRent": 1700
+        },
+        {
+            "size": 148.76,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 120.99,
+            "monthlyRent": 4000
+        },
+        {
+            "size": 330.027,
+            "monthlyRent": 2800
+        },
+        {
+            "size": 275.72,
+            "monthlyRent": 26000
+        },
+        {
+            "size": 174.76,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 241.25,
+            "monthlyRent": 5600
+        },
+        {
+            "size": 69.42,
+            "monthlyRent": 890
+        },
+        {
+            "size": 46.1057,
+            "monthlyRent": 15000
+        },
+        {
+            "size": 62.8,
+            "monthlyRent": 1900
+        },
+        {
+            "size": 370.0,
+            "monthlyRent": 90000
+        },
+        {
+            "size": 39.67,
+            "monthlyRent": 700
+        },
+        {
+            "size": 46.069,
+            "monthlyRent": 13000
+        },
+        {
+            "size": 82.64,
+            "monthlyRent": 2000
+        },
+        {
+            "size": 101.12,
+            "monthlyRent": 2300
+        },
+        {
+            "size": 125.13,
+            "monthlyRent": 2500
+        },
+        {
+            "size": 431.43,
+            "monthlyRent": 18000
+        },
+        {
+            "size": 49.59,
+            "monthlyRent": 2550
+        },
+        {
+            "size": 99.17,
+            "monthlyRent": 3820
+        },
+        {
+            "size": 99.17,
+            "monthlyRent": 2400
+        },
+        {
+            "size": 13.22,
+            "monthlyRent": 1280
+        },
+        {
+            "size": 56.2,
+            "monthlyRent": 1680
+        },
+        {
+            "size": 103.52,
+            "monthlyRent": 4500
+        },
+        {
+            "size": 102.17,
+            "monthlyRent": 7200
+        },
+        {
+            "size": 231.0,
+            "monthlyRent": 10300
+        },
+        {
+            "size": 115.7,
+            "monthlyRent": 13900
+        },
+        {
+            "size": 49.3,
+            "monthlyRent": 2000
+        }
+    ]
 }
