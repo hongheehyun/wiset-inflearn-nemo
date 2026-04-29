@@ -2,77 +2,74 @@
 marp: true
 theme: default
 paginate: true
-header: "NemoApp 상가 데이터 분석 보고서 (Neo-Brutalism)"
+header: "NemoApp 상가 데이터 분석 보고서 (Risograph Style)"
 footer: "© 2026 NemoApp Data Analysis Team"
-backgroundColor: #F5F500
+backgroundColor: #F7F2E8
 style: |
   section {
-    font-family: 'Space Mono', 'Courier New', 'Apple SD Gothic Neo', sans-serif;
-    color: #000000;
-    padding: 40px;
-    border: 5px solid #000000;
-    box-shadow: 15px 15px 0px 0px #000000;
-    margin: 20px;
+    font-family: 'Space Mono', 'Apple SD Gothic Neo', sans-serif;
+    color: #2D2D2D;
+    background-color: #F7F2E8;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    padding: 50px;
   }
   h1 {
-    font-family: 'Impact', 'Arial Black', sans-serif;
-    color: #000000;
-    font-size: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 4px;
+    color: #E8344A;
+    text-shadow: 4px 4px 0px rgba(13, 92, 158, 0.3);
     text-transform: uppercase;
-    background-color: #FFFFFF;
-    border: 4px solid #000000;
-    padding: 20px;
-    box-shadow: 10px 10px 0px 0px #000000;
-    display: inline-block;
+    margin-bottom: 0px;
   }
   h2 {
-    font-family: 'Impact', sans-serif;
-    color: #000000;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 45px;
-    background-color: #CCFF00;
-    border: 3px solid #000000;
-    padding: 10px 20px;
-    box-shadow: 8px 8px 0px 0px #000000;
-    display: inline-block;
+    color: #0D5C9E;
+    border-bottom: 3px dashed #F5D020;
+    padding-bottom: 10px;
     margin-bottom: 30px;
   }
-  table {
-    border: 4px solid #000000;
-    border-collapse: collapse;
-    background-color: #FFFFFF;
-    box-shadow: 10px 10px 0px 0px #000000;
+  .card {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #2D2D2D;
+    padding: 20px;
+    mix-blend-mode: multiply;
   }
-  th, td {
-    border: 2px solid #000000;
-    padding: 15px;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    mix-blend-mode: multiply;
   }
   th {
-    background-color: #FF2D55;
-    color: #FFFFFF;
+    background-color: #F5D020;
+    color: #2D2D2D;
+    padding: 10px;
+  }
+  td {
+    border-bottom: 1px solid #0D5C9E;
+    padding: 10px;
   }
   .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
   }
-  .card {
-    background-color: #FFFFFF;
-    border: 3px solid #000000;
-    padding: 15px;
-    box-shadow: 8px 8px 0px 0px #000000;
+  img {
+    filter: sepia(0.2) contrast(1.1) brightness(0.9);
+    mix-blend-mode: multiply;
+    border: 1px solid #2D2D2D;
   }
   blockquote {
-    background-color: #0000FF;
-    color: #FFFFFF;
-    border: 3px solid #000000;
-    padding: 15px;
-    box-shadow: 8px 8px 0px 0px #000000;
-    margin-top: 20px;
+    border-left: 5px solid #E8344A;
+    padding-left: 20px;
+    font-style: italic;
+    color: #E8344A;
   }
 ---
 
 # NEMOAPP REPORT
-### EXPERT EDA REPORT
+### ANALOG DATA INSIGHTS
 
 **SPEAKER:** GEMINI CLI
 **DATE:** 2026-04-29
@@ -106,12 +103,12 @@ style: |
 ## 3. DISTRIBUTION
 
 <div class="columns">
-<div class="card">
+<div>
 
 ![w:400](images/viz1_deposit_dist.png)
 **DEPOSIT**: PEAK AT 30M-50M
 </div>
-<div class="card">
+<div>
 
 ![w:400](images/viz2_rent_dist.png)
 **RENT**: PEAK AT 2M-3M
@@ -123,12 +120,12 @@ style: |
 ## 4. SIZE VS RENT
 
 <div class="columns">
-<div class="card">
+<div>
 
 ![w:400](images/viz3_size_vs_rent.png)
 **CORRELATION**: STRONG LINEAR RELATION
 </div>
-<div class="card">
+<div>
 
 ![w:400](images/viz4_cat_large_freq.png)
 **CATEGORY**: F&B DOMINANT
@@ -140,12 +137,12 @@ style: |
 ## 5. FLOOR PREMIUM
 
 <div class="columns">
-<div class="card">
+<div>
 
 ![w:400](images/viz5_floor_vs_rent.png)
 **FLOOR**: 1ST FLOOR PREMIUM IS HUGE
 </div>
-<div class="card">
+<div>
 
 ![w:400](images/viz6_dep_vs_rent.png)
 **RELATION**: 0.948 (VERY STRONG)
@@ -157,12 +154,12 @@ style: |
 ## 6. EFFICIENCY
 
 <div class="columns">
-<div class="card">
+<div>
 
 ![w:400](images/viz7_area_price_dist.png)
 **VALUE**: CONCENTRATED AT 125 MARK
 </div>
-<div class="card">
+<div>
 
 ![w:400](images/viz9_maint_vs_rent.png)
 **MAINT**: HIDDEN COST ALERT
@@ -174,12 +171,12 @@ style: |
 ## 7. PREMIUM ANALYSIS
 
 <div class="columns">
-<div class="card">
+<div>
 
 ![w:350](images/viz10_premium_pie.png)
 **PREMIUM**: 54% NO PREMIUM
 </div>
-<div class="card">
+<div>
 
 ![w:450](images/viz11_tfidf_keywords.png)
 **KEYWORDS**: STATION-AREA, MAIN ROAD
